@@ -8,7 +8,7 @@ namespace API.Controllers;
 
 [ApiController]
 [Route("api/[controller]")] // /api/usres
-public class UsersContorller(DataContext context) : ControllerBase
+public class UsersController(DataContext context) : ControllerBase
 {
 
     [HttpGet]
