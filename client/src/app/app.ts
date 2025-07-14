@@ -11,7 +11,7 @@ import { Home } from "./home/home";
   //imports: [RouterOutlet],
   templateUrl: './app.html',
   styleUrl: './app.css',
-  imports: [Nav, Home]
+  imports: [Nav, RouterOutlet]
 })
 export class App implements OnInit {
   
