@@ -1,1 +1,45 @@
 /* You can add global styles to this file, and also import other style files */
+/* پنل کلی تب‌ها */
+.tab-panel {
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+/* استایل تب هنگام هاور یا زمانی که open هست */
+.nav-tabs > li:hover {
+  border-bottom: 4px solid #fbcdcf;
+}
+
+.nav-tabs > li:hover > button {
+  border: 0;
+  background: none ;
+  color: #333333;
+}
+
+/* آیکن در تب هنگام هاور */
+.nav-tabs > li:hover > button > i {
+  color: #a6a6a6;
+}
+
+/* استایل تب فعال */
+.nav-tabs .nav-link.active {
+  border: none ;
+  border-bottom: 4px solid #E95420;
+  color: #333333;
+  position: relative;
+}
+
+/* آیکن در تب فعال */
+.nav-tabs .nav-link.active > i {
+  color: #404040;
+}
+
+/* محتوای تب‌ها */
+.tab-content {
+  margin-top: -3px;
+  background-color: #fff;
+  border: 0;
+  border-top: 1px solid #eee;
+  padding: 15px 0;
+}
