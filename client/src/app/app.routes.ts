@@ -8,6 +8,8 @@ import { authGuard } from './_guards/auth-guard';
 import { TestErrors } from './erors/test-errors/test-errors';
 import { ServerError } from './erors/server-error/server-error';
 import { NotFound } from './erors/not-found/not-found';
+import { MemberEdit } from './members/member-edit/member-edit';
+import { preventUnsavedChangesGuard } from './_guards/prevent-unsaved-changes-guard';
 
 export const routes: Routes = [
     { path: '', component: Home },
@@ -18,6 +20,7 @@ export const routes: Routes = [
         children: [
             { path: 'members', component: MemberList, canActivate: [authGuard] },
             { path: 'member/:username', component: MemberDetail },
+            { path: 'members/edit', component: MemberEdit , canDeactivate: [preventUnsavedChangesGuard] },
             { path: 'lists', component: Lists },
             { path: 'messages', component: Messages },
         ]
