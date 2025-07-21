@@ -4,10 +4,11 @@ import { Account } from '../../_services/account';
 import { Members } from '../../_services/members';
 import { FormsModule, NgForm } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
+import { PhotoEditor } from "../photo-editor/photo-editor";
 
 @Component({
   selector: 'app-member-edit',
-  imports: [FormsModule],
+  imports: [FormsModule, PhotoEditor],
   templateUrl: './member-edit.html',
   styleUrl: './member-edit.css'
 })
@@ -43,6 +44,9 @@ export class MemberEdit implements OnInit {
         this.editForm?.reset(this.member);
       }
     })
+  }
 
+  onMemberChange(event : Member){
+    this.member = event;
   }
 }

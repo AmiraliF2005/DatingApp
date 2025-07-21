@@ -78,7 +78,7 @@
             </div>
 
             <div class="tab-pane fade show " id="editPhoto" role="tabpanel" aria-labelledby="editPhoto-tab">
-                <p>Edit Photo will go here</p>
+                <app-photo-editor [member]="member" (memberChange)="onMemberChange($event)"></app-photo-editor>
             </div>
         </div>
     </div>
